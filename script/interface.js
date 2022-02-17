@@ -16,7 +16,7 @@ function handleClick(event) {
   if (handleMove(position)) {
     setTimeout(() => {
       let winner = document.querySelector(".winner")
-      player = (playerTime == 0) ? "Vitória: 🛡️" : "Vitória: ⚔️"
+      player = (playerTime == 0) ? "Winner: 🛡️" : "Winner: ⚔️"
       winner.innerText = player
       //alert("O jogo acabou! - O Vencedor foi " + playerTime)
     }, 10)
@@ -26,7 +26,7 @@ function handleClick(event) {
 
 function updateSquare(position){
   let square = document.getElementById(position.toString())
-  console.log(position)
+  //console.log(position)
   let symbol = board[position]
   square.innerHTML = `<div class='${symbol}'></div>`
 }
