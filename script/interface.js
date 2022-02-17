@@ -8,29 +8,31 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function handleClick(event) {
-  console.log(event.target)
+  //console.log(event.target)
 
   let square = event.target;
   let position = square.id;
 
   if (handleMove(position)) {
     setTimeout(() => {
-      alert("O jogo acabou! - O Vencedor foi " + playerTime)
+      let winner = document.querySelector(".winner")
+      player = (playerTime == 0) ? "Vitória: 🛡️" : "Vitória: ⚔️"
+      winner.innerText = player
+      //alert("O jogo acabou! - O Vencedor foi " + playerTime)
     }, 10)
   }
-  updateSquare();
+  updateSquare(position);
 }
 
-
-function updateSquare() {
-  let squares = document.querySelectorAll(".square");
-
-  squares.forEach((square) => {
-    let position = square.id
-    let symbol = board[position]
-
-    if (symbol != '') {
-      square.innerHTML = `<div class='${symbol}'></div>`
-    }
-  })
+function updateSquare(position){
+  let square = document.getElementById(position.toString())
+  console.log(position)
+  let symbol = board[position]
+  square.innerHTML = `<div class='${symbol}'></div>`
 }
+
+function btnClick(){
+  btn = document.querySelector(".button")
+  btn.addEventListener("click", restart)
+}
+

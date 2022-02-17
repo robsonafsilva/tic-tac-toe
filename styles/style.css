@@ -1,14 +1,13 @@
 body {
   text-align: center;
+  background-color: #495371;
 }
 
 h1{
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
-.stage{
-  
-}
 
 .square{
   width: 100px;
@@ -16,6 +15,7 @@ h1{
   background-color: beige;
   border: 1px solid gray;
   display: inline-block;
+  border-radius: 10px;
 }
 
 .o{
@@ -49,4 +49,32 @@ h1{
   left: 0;
   right: 0;
 
+}
+
+.winner {
+  display: block;
+  color: white;
+  font-size: 50px; 
+  margin-top: 10px; 
+ 
+}
+
+
+
+.button{
+  width: 150px;
+  height: 50px;
+  margin-top: 25px;
+  background-color: #f1e0ac;
+  color:  #483D8B;
+  font-size: 20px;
+  transition: 0.2s;
+  border-radius: 20px;
+  border: none;
+ 
+}
+
+.button:hover{
+  background-color:  #98b4aa ;
+  
 }
